@@ -1,0 +1,177 @@
+/* common css-----------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+}
+
+ /* reset float overflow */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/* !reset float overflow */
+
+.container{
+    width: 1240px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+/* cloumn devide  */
+.column2{
+    width: 49.5%;
+    padding: 0 15px; 
+    float: left;
+}
+.column3{
+    width: 33.33%;
+    padding: 0 15px;
+    float: left;
+}
+/* !cloumn devide  */
+.divider{
+    display: flex;
+    padding: 15px 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* /common css-----------------------------------------------------------*/
+/* header -----------------------------------------------------------*/
+.logo{
+    display: flex;
+    width: 10%;
+}
+.mr-1{
+    margin-right: 1%;
+}
+
+/* .logo img{
+    
+    width: 80px;
+    display: block;
+} */
+.primaryNav{
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+    position: relative;
+    width: 90%;
+}
+
+.primaryNav ul{
+    margin: 0;
+    padding: 0;
+}
+.primaryNav ul li{
+    padding-left: 15px;
+    float: left;
+    list-style: none;
+}
+.primaryNav ul li a{
+    text-decoration: none;
+    display: block;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+}
+.primaryNav ul li a.active{
+    color: red;
+}
+.primaryNav ul li a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    height: 3px;
+    width: 0%;
+    background: red;
+    transition: all .4s;
+}
+
+
+.primaryNav ul li a:hover{
+    color: red;
+}
+.primaryNav ul li:hover a::after{
+    width: 100%;
+}
+/* /header -----------------------------------------------------------*/
+
+ /* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    body{
+        background-color: greenyellow;
+       
+    }
+    .column2{
+        width: 100%;
+        padding: 0 15px; 
+        float: none;
+    }
+    .mr-1{
+        margin-right: 0%;
+    }
+    
+ }
+
+  /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    body{
+        background-color: red;
+       
+    }
+    .column2{
+        width: 100%;
+        padding: 0 15px; 
+        float: none;
+    }
+    .mr-1{
+        margin-right: 0%;
+    }
+    
+ }
+
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    body{
+        background-color: yellow;
+       
+    }
+    .column2{
+        width: 45%;
+        padding: 0 15px; 
+        float: left;
+    }
+    .mr-1{
+        margin-right: 10%;
+    }
+ 
+ }
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    body{
+        background-color: rgb(47, 0, 255);
+       
+    }
+    .column2{
+        width: 45%;
+        padding: 0 15px; 
+        float: left;
+    }
+    .mr-1{
+        margin-right: 10%;
+    }
+ }
+
+ /* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { ... }
